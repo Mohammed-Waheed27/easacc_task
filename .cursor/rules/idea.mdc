@@ -1,69 +1,0 @@
----
-alwaysApply: true
----
-this is my businiss idea 
-يا خلاص، هشرحلك الفكرة البزنس الكاملة بالتفصيل، زي الـconcept (الفكرة الأساسية) وأفضل الممارسات (best practices) عشان تطبيقها، عشان تقدر تستخدم الشرح ده كـrole أو دليل للـAI agents في Cursor app بتاعتك أثناء البناء والتنفيذ (building and implementation phase). الـAI agents هيعرفوا بالضبط إيه اللي هما بيشتغلوا عليه، وهيتبعوا الخطوات دي عشان التطبيق يبقى قوي، scalable، ويحقق الهدف البزنس. هعتمد على بيانات حقيقية من تقارير 2025 زي Statista وBlueWeave، ودراسات حالات (case studies) لتطبيقات مشابهة في مصر والـMENA، مش حاجات عشوائية، وهشمل أفضل ممارسات في الـcode architecture (زي Clean Architecture مع Flutter، Drift، وSupabase).
-
-### 🧩 الـConcept (الفكرة الأساسية) للبزنس
-الفكرة هي بناء تطبيق SaaS (Software-as-a-Service) اسمه مثلاً "ShopSmart" أو "قهوة ديجيتال"، موجه للمحلات الصغيرة، الكافيهات، والأعمال المحلية في مصر (زي القهوة البلدي، السوبرماركت الصغير، أو المتاجر الميني). الهدف هو تحويل النظم اليدوية القديمة (زي الدفاتر الورقية للطلبات، الكاشير، والمخزون) إلى تطبيق موبايل سهل الاستخدام، يعمل أوفلاين أولاً (offline-first)، ويتزامن مع السحابة لاحقاً. 
-
-- **المشكلة اللي بنحلها (Problem Solved)**: في مصر، حسب تقرير OECD 2025، 90% من الأعمال الصغيرة (SMEs) لسة بتعتمد على الورق، اللي بيسبب أخطاء، ضياع وقت، وصعوبة في التقارير. التطبيق ده هيوفر حل رقمي رخيص وسريع، يزود الإنتاجية بنسبة 30-50% (من case studies زي Appinventiv في الـMENA).
-- **الميزات الرئيسية (Key Features)**:
-  - **كاشير ذكي وإدارة الطلبات (Smart Cashier & Order Management)**: إضافة طلبات، حساب الإجمالي، وتسجيل الدفعات.
-  - **تتبع المخزون والتنبيهات (Inventory Tracking & Stock Alerts)**: مراقبة المنتجات، إشعارات عند انخفاض المخزون.
-  - **تقارير يومية وملخصات (Daily Reports & Summaries)**: إحصائيات مبيعات، أرباح، وتحليل بسيط.
-  - **دعم متعدد الأجهزة (Multi-Device Access)**: للصاحب والموظفين، مع مشاركة البيانات.
-  - **وضع أوفلاين مع تزامن تلقائي (Offline Mode with Auto-Sync)**: يعمل بدون إنترنت، ويرسل التغييرات للسحابة لاحقاً عشان يناسب المناطق اللي الإنترنت ضعيف فيها.
-- **الجمهور المستهدف (Target Audience)**: 500,000 محل صغير في مصر (تقدير من USDA 2025)، خاصة في القاهرة، الإسكندرية، والدلتا. ابدأ بـ100 مستخدم أولى، ووصل لـ1000 في السنة الأولى (زي هدفك).
-- **نموذج الربح (Monetization Model)**: اشتراكات شهرية/سنوية/مدى الحياة، عشان دخل مستقر:
-  | الخطة | السعر (جنيه مصري) | الميزات |
-  |-------|---------------------|----------|
-  | شهري | 200-250 | الوصول الكامل، باك أب تلقائي، تحديثات. |
-  | نصف سنوي | 1200 | توفير ~100 جنيه. |
-  | سنوي | 2200 | توفير ~800 جنيه. |
-  | مدى الحياة | 4000-5000 | دفعة واحدة، تحديثات مدى الحياة. |
-  **الهدف**: 1000 مستخدم × 200 جنيه = 200,000 جنيه شهرياً (2.4 مليون سنوياً)، مع تكاليف سيرفرات منخفضة (~2000 جنيه شهرياً لـSupabase).
-- **الهدف الشخصي (Personal Goal)**: استخدم الإيرادات عشان تشتري بيك أب تراك (زي Toyota Hilux بـ1.7 مليون جنيه كاش) وتسافر في أماكن مصر اللي فيها مناظر حلوة زي سيناء، سيوة، الأقصر، وأسوان.
-- **سوق الفرصة (Market Opportunity)**: سوق الـSaaS في مصر هيصل 165 مليون دولار في 2025 (Statista)، بنمو 20-25% سنوياً (BlueWeave). فرصة كبيرة لأن التطبيقات المشابهة زي Gameball وExpandCart حققت إيرادات ملايين الدولارات في سنوات قليلة.
-
-### ⚙️ أفضل الممارسات (Best Practices) لتطبيق الفكرة
-عشان الـAI agents في Cursor يتبعوا الدليل ده أثناء البناء، هقسمها لمراحل الـSDLC (System Development Life Cycle)، مع التركيز على الـcode architecture والتكنولوجيا. الـagents لازم يركزوا على scalability، security، وuser-friendly design، بناءً على trends 2025 زي Flutter docs وGloriumTech guides.
-
-1. **التخطيط والتصميم (Planning & Design)**:
-   - **Best Practice**: ابدأ بـfeasibility study وmarket analysis (زي الـSWOT: Strengths زي offline-first، Weaknesses زي المنافسة). حدد user stories: "كصاحب محل، أريد إضافة طلب أوفلاين عشان أستمر في العمل بدون إنترنت".
-   - **Architecture Design**: استخدم Clean Architecture (Uncle Bob principles) عشان separation of concerns:
-     - **Domain Layer**: Entities (زي ProductEntity: id, name, price, stock, updatedAt)، UseCases (زي AddOrderUseCase يرجع Either<Failure, Success> من dartz للـerror handling)، Repositories interfaces (abstract زي OrderRepository).
-     - **Data Layer**: Datasources (Local: Drift للـDB tables زي products, orders, sync_queue مع columns لـoperationType, data, status)، Remote: Supabase_flutter للـRPC أو Edge Functions). Repository Impl يستخدم SyncManager للـoffline-first.
-     - **Presentation Layer**: Flutter UI مع Bloc للـstate management (events زي LoadOrdersEvent، states زي LoadingState). استخدم Feature-First folder structure (features/orders/domain، data، presentation).
-   - **Tools**: Figma للـUI wireframes (mobile-first، RTL للعربية)، Draw.io للـarchitecture diagram.
-   - **Case Study**: زي Appinventiv في MENA، اللي خفضت bugs 50% بـClean Arch.
-
-2. **التطوير (Development & Implementation)**:
-   - **Best Practice**: استخدم Agile مع sprints (2 أسابيع لكل feature). ابدأ بـMVP: orders وinventory، ثم أضف reports.
-   - **Code Architecture Details**:
-     - **Syncing Mechanism**: SyncManager (singleton في core/services) يدير up sync (local → cloud: on app start/internet resume، send JSON to Supabase Edge Function)، down sync (cloud → local: compare updatedAt، latest wins للـconflicts). استخدم timestamps أو version numbers، وhandle errors في failures.dart.
-     - **Dependencies**: pubspec.yaml: flutter_bloc, drift, supabase_flutter, get_it (للـDI في injection_container.dart)، dartz, freezed.
-     - **Testing**: TDD (Test-Driven Development): unit tests لـUseCases بـmockito، integration tests للـsync.
-     - **Security**: Supabase row-level security، encrypt local data في Drift إذا لزم.
-   - **Folder Structure** (كما شرحتها قبل): lib/src/core (constants, errors, utils, services)، features (authentication, orders, inventory, etc.) مع sub-layers.
-   - **Trends 2025**: أضف AI للـreports (زي suggestions بـGemini API في phase 2)، حسب Peerbits.
-
-3. **الاختبار والإطلاق (Testing & Deployment)**:
-   - **Best Practice**: 20% من الوقت للـtesting (unit, integration, UI). استخدم beta testing مع 10 محلات حقيقية عشان feedback.
-   - **Deployment**: Google Play/App Store، مع Supabase للـbackend. راقب analytics (Supabase dashboard) عشان retention rate >70%.
-   - **Case Study**: ExpandCart حققت نمو 200% بـbeta launches.
-
-4. **التسويق والنمو (Marketing & Growth)**:
-   - **Best Practice**: ركز على FB/TikTok ads (ميزانية 5000-10000 جنيه أولى)، demo videos مضحكة زي اللي ناقشناها قبل (مع memes عشان viral). شراكات مع جمعيات SMEs.
-   - **Phases for Growth**:
-     - Phase 1 (MVP): 100 مستخدم، إيرادات 20,000 جنيه شهري.
-     - Phase 2: Multi-branch، AI، 1000+ مستخدم.
-     - Phase 3: Web dashboard، payments integration (زي Fawry).
-     - Phase 4: White-label للعلامات الكبيرة.
-   - **Metrics**: ARPU 220 جنيه، churn <5% (خسارة عملاء).
-
-5. **الصيانة والتوسع (Maintenance & Scaling)**:
-   - **Best Practice**: تحديثات شهرية، support عبر chat (integrate WhatsApp API). راقب costs (Supabase scale automatically).
-   - **Risks**: المنافسة (431 SaaS في مصر، Tracxn)، فتميز بـoffline-first وتسعير محلي.
-
-ده الدليل الكامل للـAI agents في Cursor: يتبعوا الـconcept ده كـrole، يركزوا على Clean Arch للـcode، ويطبقوا best practices في كل phase عشان التطبيق يحقق الإيرادات ويوصلك لحلمك. لو عايز تعديل أو أمثلة كود، قولي!
