@@ -1,0 +1,43 @@
+---
+description: 
+globs: 
+alwaysApply: true
+---
+Description
+This rule ensures that Cursor creates UI designs that align with the app’s established standards, maintain consistency across the app, and follow clean, maintainable code practices. It prevents Cursor from making assumptions about the UI, enforces the use of separate stateless widgets instead of functions in a single file, leverages SOLID principles, and uses BLoC for state management.
+
+Guidelines
+No Assumptions About UI Design
+Cursor must stick to the app’s existing UI standards (e.g., colors, typography, layouts) as defined in the app’s theme or design system.
+It should not introduce new styles or behaviors unless explicitly requested, ensuring the UI remains consistent with the rest of the app.
+Consistent UI Across the App
+Similar UI elements (e.g., buttons, text fields, cards) must look and behave the same way throughout the app.
+Reuse existing widgets or components whenever possible to maintain uniformity.
+Separate Stateless Widgets for New Pages
+When creating a new page, Cursor must not use functions within the same file to build UI components.
+Instead, break down the page into separate stateless widget files, each responsible for a specific part of the UI (e.g., header, content, footer).
+Example: For a ProfilePage, create files like profile_header.dart, profile_details.dart, etc.
+Avoid Bad Code Structure
+Do not cram all code into a single file. Divide the UI into smaller, modular widgets stored in separate files.
+This improves readability, maintainability, and scalability.
+Harness SOLID Principles
+Single Responsibility Principle: Each widget or class should have one job (e.g., a widget for displaying a list, another for handling input).
+Open/Closed Principle: Widgets should be extensible (e.g., through parameters) but not require modification to adapt to new needs.
+Liskov Substitution Principle: Subclasses or widgets should work seamlessly when replacing their parent types.
+Interface Segregation Principle: Keep widget interfaces specific; don’t force widgets to depend on unused methods.
+Dependency Inversion Principle: Depend on abstractions (e.g., interfaces or BLoC) rather than concrete implementations.
+Use BLoC for State Management
+Avoid using functions for state management or logic within the UI code.
+Use the BLoC pattern to separate business logic from the UI, making the code cleaner and more predictable.
+Example: For a SettingsPage, create a SettingsBloc to manage state changes like toggling options or saving data.
+Write Clean, Understandable Code
+Use meaningful variable and widget names (e.g., userProfileCard instead of card1).
+Keep code concise and focused; avoid long, cluttered functions or widgets.
+Comment where necessary to explain complex logic.
+Sectioned Code Without Functions in One File
+Organize the codebase into logical sections:
+UI Components: Separate widget files (e.g., login_form.dart, app_bar_widget.dart).
+BLoC Logic: Files for state management (e.g., login_bloc.dart).
+Utilities: Helper classes or constants (e.g., colors.dart, api_service.dart).
+
+Do not use functions within a single file to handle UI or logic; rely on widgets and BLoC instead.

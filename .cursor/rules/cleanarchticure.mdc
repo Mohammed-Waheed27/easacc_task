@@ -1,0 +1,28 @@
+---
+description: 
+globs: 
+alwaysApply: true
+---
+Folder Structure:
+Each page or feature must have its own dedicated folder (e.g., lib/features/home).
+Inside each page folder, include the following subfolders:
+sections: For organizing the main components or sections of the page.
+widgets: For widgets that are only used within this specific page. These should not be shared with other pages.
+Place common widgets that are reusable across multiple pages in a shared folder inside the core folder (e.g., lib/core/shared/widgets).
+Clean Architecture Principles:
+Strictly follow clean architecture by dividing the code into layers:
+Presentation Layer: Handles UI and state management (e.g., widgets, Blocs).
+Domain Layer: Contains business logic and entities (e.g., use cases, repositories).
+Data Layer: Manages data sources and models (e.g., APIs, databases).
+Ensure layers are independent, with dependencies flowing inward (e.g., presentation depends on domain, not data).
+SOLID Principles:
+Adhere to SOLID principles for maintainable and scalable code:
+Single Responsibility: Each class or widget should have one purpose.
+Open/Closed: Code should allow extension without modification.
+Liskov Substitution: Subclasses should replace their base classes seamlessly.
+Interface Segregation: Keep interfaces small and specific.
+Dependency Inversion: Depend on abstractions (e.g., interfaces), not concrete classes.
+Ease of Use and Readability:
+Divide the code into sections and widgets to make it easy to read and manage.
+
+Keep files small and focused, avoiding large, cluttered files.
